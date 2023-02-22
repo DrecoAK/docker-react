@@ -12,7 +12,7 @@ jobs:
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t drecoak/docker-react .
+        run: docker build -t drecoak/docker-react -f Dockerfile.dev .
       - name: Run NPM Test
         run: docker run -e CI=true drecoak/docker-react npm run test
  

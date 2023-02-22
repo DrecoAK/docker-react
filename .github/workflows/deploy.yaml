@@ -12,9 +12,9 @@ jobs:
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
-        run: docker build -t drecoak/react-test -f Dockerfile.dev .
+        run: docker build -t drecoak/docker-react -f Dockerfile.dev .
       - name: Run NPM Test
-        run: docker run -e CI=true drecoak/react-test npm test
+        run: docker run -e CI=true drecoak/docker-react npm run test
  
       # - name: Generate deployment package
       #   run: zip -r deploy.zip . -x '*.git*'

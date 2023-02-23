@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hi There! Using Compose is really nice!
+          Hi There! Using Compose is really nice! Changing on a feature branch?? YES!
         </p>
         <a
           className="App-link"
